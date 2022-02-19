@@ -1,7 +1,7 @@
-@mixin centered($dir: row) {
+@mixin centered($dir: row, $horizontal: center, $vertical: center) {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: $horizontal;
+  align-items: $vertical;
   flex-direction: $dir;
 }
 

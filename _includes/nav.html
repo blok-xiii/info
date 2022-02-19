@@ -1,16 +1,31 @@
 <nav>
-    <span class="navbar-brand">
-      <a href="{{ "/" | absolute_url }}">Blok13</a>
-    </span>
-  <span class="navbar-links">
-      <span class="navbar-link">
-        Domov
-      </span>
-      <span class="navbar-link">
-        Bruci
-      </span>
-      <span class="navbar-link">
-        Pralnica
-      </span>
-    </span>
+
+    <div class="link-category">
+        <div class="category-links">
+            <div class="navbar-link {% if '/' == page.url %}active-link{% endif %}">
+                <a href="{{ site.baseurl }}/">Domov</a>
+            </div>
+            <div class="navbar-link {% if '/vsebina/bruci.html' == page.url %}active-link{% endif %}">
+                <a href="{{ site.baseurl }}/vsebina/bruci.html">Bruci</a>
+            </div>
+            <div class="navbar-link {% if '/vsebina/dezurstva.html' == page.url %}active-link{% endif %}">
+                <a href="{{ site.baseurl }}/vsebina/dezurstva.html">Dežuranja</a>
+            </div>
+        </div>
+        <div class="category-separator"></div>
+    </div>
+
+    <div class="link-category">
+        <div class="category-links">
+            <div class="navbar-link">
+                <a href="https://www.facebook.com/groups/1491447311076986" target="_blank" rel="noreferrer noopener">FB Skupina</a>
+            </div>
+            <div class="navbar-link">
+                <a href="https://teamup.com/ksk3yy4atmtzqu9kkg" target="_blank" rel="noreferrer noopener">Pranje</a>
+            </div>
+            <div class="navbar-link">
+                <a href="https://teamup.com/ksickcitmqbkgxh72q" target="_blank" rel="noreferrer noopener">Športna oprema</a>
+            </div>
+        </div>
+    </div>
 </nav>
