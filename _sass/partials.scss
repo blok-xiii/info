@@ -1,0 +1,11 @@
+@mixin centered($dir: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $dir;
+}
+
+@mixin clear-float {
+  float: unset;
+  position: unset;
+}

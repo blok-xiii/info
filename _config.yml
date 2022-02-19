@@ -1,0 +1,9 @@
+title: Blok 13
+description: >- # this means to ignore newlines until "baseurl:"
+  Stran za informacije bloka 13
+baseurl: "/info" # the subpath of your site, e.g. /blog
+
+theme: jekyll-theme-minimal
+
+exclude:
+  - README.md
