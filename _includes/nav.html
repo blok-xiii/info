@@ -1,30 +1,40 @@
-<nav>
-
-    <div class="link-category">
-        <div class="category-links">
-            <div class="navbar-link {% if '/' == page.url %}active-link{% endif %}">
-                <a href="{{ site.baseurl }}/">Domov</a>
+<nav id="navbar" class="hidden">
+    <div class="navbar-content">
+        <div class="link-category">
+            <div class="category-links">
+                <div class="navbar-link {% if '/' == page.url %}active-link{% endif %}">
+                    <a href="{{ site.baseurl }}/">Domov</a>
+                </div>
+                <div class="navbar-link {% if '/vsebina/bruci.html' == page.url %}active-link{% endif %}">
+                    <a href="{{ site.baseurl }}/vsebina/bruci.html">Bruci</a>
+                </div>
+                <div class="navbar-link {% if '/vsebina/dezurstva.html' == page.url %}active-link{% endif %}">
+                    <a href="{{ site.baseurl }}/vsebina/dezurstva.html">Dežuranja</a>
+                </div>
             </div>
-            <div class="navbar-link {% if '/vsebina/bruci.html' == page.url %}active-link{% endif %}">
-                <a href="{{ site.baseurl }}/vsebina/bruci.html">Bruci</a>
-            </div>
-            <div class="navbar-link {% if '/vsebina/dezurstva.html' == page.url %}active-link{% endif %}">
-                <a href="{{ site.baseurl }}/vsebina/dezurstva.html">Dežuranja</a>
-            </div>
+            <div class="category-separator"></div>
         </div>
-        <div class="category-separator"></div>
-    </div>
 
-    <div class="link-category">
-        <div class="category-links">
-            <div class="navbar-link">
-                <a href="https://www.facebook.com/groups/1491447311076986" target="_blank" rel="noreferrer noopener">FB Skupina</a>
+        <div class="link-category">
+            <div class="category-links">
+                <div class="navbar-link">
+                    <a href="https://www.facebook.com/groups/1491447311076986" target="_blank" rel="noreferrer noopener">FB Skupina</a>
+                </div>
+                <div class="navbar-link">
+                    <a href="https://teamup.com/ksk3yy4atmtzqu9kkg" target="_blank" rel="noreferrer noopener">Pranje</a>
+                </div>
+                <div class="navbar-link">
+                    <a href="https://teamup.com/ksickcitmqbkgxh72q" target="_blank" rel="noreferrer noopener">Športna oprema</a>
+                </div>
             </div>
-            <div class="navbar-link">
-                <a href="https://teamup.com/ksk3yy4atmtzqu9kkg" target="_blank" rel="noreferrer noopener">Pranje</a>
-            </div>
-            <div class="navbar-link">
-                <a href="https://teamup.com/ksickcitmqbkgxh72q" target="_blank" rel="noreferrer noopener">Športna oprema</a>
+            <div class="category-separator"></div>
+        </div>
+
+        <div class="link-category">
+            <div class="category-links">
+                <div class="navbar-link">
+                    <a href="https://goo.gl/maps/grYfUPr1dJCW5sAi7" target="_blank" rel="noreferrer noopener">Kje?</a>
+                </div>
             </div>
         </div>
     </div>

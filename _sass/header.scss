@@ -1,18 +1,39 @@
 header {
   @include clear-float;
   width: unset;
+  padding: 0 40px 0 40px;
   display: flex;
-  padding: 20px 40px 0 40px;
+  justify-content: space-between;
+  background-color: $blue-bg;
+  height: 100px;
 
   .navbar-brand {
     @include centered;
     font-size: 2rem;
     font-weight: 600;
     text-decoration: none;
-    color: $orange-200;
+    @include no-select;
 
-    img {
-      width: 80px;
+    span {
+      font-size: 2rem;
+      color: $white-font;
+      @include no-select;
+    }
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}
+
+@include device-specific($phone) {
+  header {
+    .burger-menu {
+      display: flex;
+      cursor: pointer;
+      img {
+        width: 40px;
+      }
     }
   }
 }

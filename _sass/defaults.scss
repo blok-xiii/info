@@ -2,11 +2,11 @@
 * {
   float: unset;
   position: unset;
-  color: $white-font;
+  color: $black-font;
   font-size: 1.1rem;
 }
 h1, h2, h3, h4, h5, h6 {
-  color: $white-font;
+  color: $blue-font;
 }
 h1 {
   font-size: 1.75rem;
@@ -24,7 +24,7 @@ h5 {
   font-size: 1.1rem;
 }
 strong, p, li, div, span {
-  color: $white-font;
+  color: $black-font;
   font-size: 1.1rem;
 }
 li {

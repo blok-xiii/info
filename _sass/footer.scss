@@ -1,0 +1,28 @@
+footer {
+  @include clear-float;
+  background-color: $blue-bg;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 80px;
+
+  .footer-content {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    .footer-category {
+      * {
+        color: $white-font;
+        font-size: 1rem;
+      }
+      .footer-link {
+        margin: 10px 0;
+      }
+    }
+  }
+  .footer-title {
+    margin-bottom: 10px;
+  }
+}

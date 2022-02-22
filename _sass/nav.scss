@@ -1,38 +1,89 @@
 nav {
+  .navbar-content {
+    padding-left: 40px;
+    padding-bottom: 20px;
 
-  .link-category {
-    .category-links {
-      .navbar-link {
-        margin-bottom: 15px;
+    .link-category {
+      .category-links {
+        .navbar-link {
+          margin-bottom: 15px;
 
-        a {
-          text-decoration: none;
-          font-weight: 600;
-          color: $white-font;
-          font-size: 1.1rem;
+          a {
+            text-decoration: none;
+            font-weight: 600;
+            color: $black-font;
+            font-size: 1.1rem;
 
-          &:hover {
-            color: $orange-200;
+            &:hover {
+              color: $orange-200;
+            }
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &.active-link {
+            a {
+              color: $orange-200;
+            }
           }
         }
+      }
 
-        &:last-child {
-          margin-right: 0;
-        }
+      .category-separator {
+        height: 0;
+        border: 1px solid $grey-300;
+        opacity: 0.6;
+        margin: 20px 15px 20px 0;
+      }
+    }
+  }
+}
 
-        &.active-link {
-          a {
-            color: $orange-200;
+@include device-specific($phone) {
+  nav {
+    background-color: $blue-200 !important;
+    z-index: 100;
+    margin-top: -40px;
+    transition: 1s;
+    border-bottom: 2px solid $grey-200;
+
+    .navbar-content {
+      padding-right: 25px;
+      padding-left: 25px;
+
+      .link-category {
+        .category-links {
+          .navbar-link {
+            height: 30px;
+            margin-bottom: 15px;
+
+            a {
+              color: $white-font;
+              overflow-x: hidden;
+            }
           }
         }
       }
     }
-    .category-separator {
-      height: 0;
-      border: 1px solid $grey-200;
-      opacity: 0.6;
-      margin: 20px 15px 20px 0;
-    }
 
+    &.hidden {
+      visibility: collapse;
+      transition: 1s;
+    }
+  }
+
+}
+
+@include device-specific($pc) {
+  nav.hidden {
+    visibility: visible;
+  }
+}
+
+@include device-specific($tablet) {
+  nav.hidden {
+    visibility: visible;
   }
 }

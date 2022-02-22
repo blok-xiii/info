@@ -4,6 +4,7 @@
 @import "{{ site.theme }}";
 @import "partials";
 @import "variables";
+@import "responsive";
 
 @import "defaults";
 
@@ -11,33 +12,60 @@ body {
   padding: 0;
   margin: 0;
 
-  background-image: linear-gradient(to bottom, $blue-200, $blue-300);
+  // background-image: linear-gradient(to bottom, $blue-200, $blue-400);
   min-height: 100vh;
   width: 100%;
 }
 
 @import "nav";
 @import "header";
+@import "footer";
 
 .page-wrapper {
   display: flex;
+  margin-top: 40px;
   padding-bottom: 60px;
-}
-
-nav {
-  width: 10%;
-  padding-left: 40px;
-  padding-bottom: 20px;
-  padding-top: 20px;
 }
 
 main {
   display: flex;
-  width: 90%;
-  padding-left: 20px;
+  width: 98%;
+  padding: 40px 20px 0 40px;
 
   section {
     width: 80%;
+    border: none;
+  }
+}
+
+@include device-specific($pc) {
+  nav {
+    width: 12%;
+  }
+}
+
+@include device-specific($tablet) {
+  nav {
+    width: 12%;
+  }
+}
+
+@include device-specific($phone) {
+  nav {
+    width: 100%;
+    position: absolute;
+
+    &.hidden {
+      width: 0;
+    }
+  }
+
+  main {
+    width: 100%;
+
+    section {
+      width: 100%;
+    }
   }
 }
 

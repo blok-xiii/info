@@ -7,3 +7,5 @@ theme: jekyll-theme-minimal
 
 exclude:
   - README.md
+  - .idea
+  - test.md
